@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Unit Converter</title>
+    <!-- Bootstrap Link -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <!-- External CSS Link -->
+    <link rel="stylesheet" href="css/styles.css">
+  </head>
+  <body>
+    <!-- NAVIGATION BAR -->
+    <div class="container-fluid">
+      <div class="row">
+        <div class="navigation-div">
+          <nav class="navbar navbar-expand-lg">
+              <div class="container-fluid">
+                <a class="navbar-brand myBrand" href="#">Javascript</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                  <div class="navbar-nav ms-auto d-flex align-items-center">
+                    <a class="nav-link myConverter" aria-current="page" href="#">Unit Converter</a>
+                    <a class="nav-link" href="../index.html">Calculator</a>
+                  </div>
+                </div>
+              </div>
+          </nav>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tab Section -->
+    <div class="container-fluid">
+      <div class="row">
+        <!-- tabs control navigation -->
+        <nav>
+          <div class="nav nav-tabs justify-content-center" id="nav-tab" role="tablist">
+            <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true">Length</button>
+            <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">Temperature</button>
+          </div>
+        </nav>
+        <!-- tabs content -->
+        <div class="tab-content" id="nav-tabContent">
+          <!-- length -->
+          <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab" tabindex="0">
+            <div class="frameDiv">
+              <!-- input part -->
+              <div class="inputDiv">
+                <input type="text" id="activeQuantity1" name="activeQuantity1" placeholder="Quantity" class="inputClass">
+                <input type="text" id="leftQuantity1" name="leftQuantity1" placeholder="From" class="inputClass">
+                <input type="text" id="rightQuantity1" name="rightQuantity1" placeholder="To" class="inputClass">
+              </div>
+              <!-- left div -->
+              <div class="leftDiv">
+                <button class="lenButton" type="button" onclick="displayFrom('Centimeter')">Centimeter</button>
+                <button class="lenButton" type="button" onclick="displayFrom('Meter')">Meter</button>
+                <button class="lenButton" type="button" onclick="displayFrom('Kilometer')">Kilometer</button>
+              </div>
+              <!-- right div -->
+              <div class="rightDiv">
+                <button class="lenButton" type="button" onclick="displayTo('Centimeter')">Centimeter</button>
+                <button class="lenButton" type="button" onclick="displayTo('Meter')">Meter</button>
+                <button class="lenButton" type="button" onclick="displayTo('Kilometer')">Kilometer</button>
+              </div>
+              <!-- vertical line -->
+              <div class="vl"></div>
+              <!-- answer part -->
+              <div class="answerDiv">
+                <button class="answerButton" type="button" onclick="convertLength()">Convert</button>
+                <input type="text" id="answerInput1" name="answerInput" placeholder="Answer">
+              </div>
+            </div>
+          </div>
+
+          <!-- temperature -->
+          <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab" tabindex="0">
+            <div class="frameDiv">
+              <!-- input part -->
+              <div class="inputDiv">
+                <input type="text" id="activeQuantity2" name="activeQuantity2" placeholder="Quantity" class="inputClass">
+                <input type="text" id="leftQuantity2" name="leftQuantity2" placeholder="From" class="inputClass">
+                <input type="text" id="rightQuantity2" name="rightQuantity2" placeholder="To" class="inputClass">
+              </div>
+              <!-- left div -->
+              <div class="leftDiv">
+                <button class="tempButton" type="button" onclick="displayFrom2('Celsius')">Celsius</button>
+                <button class="tempButton" type="button" onclick="displayFrom2('Kelvin')">Kelvin</button>
+                <button class="tempButton" type="button" onclick="displayFrom2('Fahrenheit')">Fahrenheit</button>
+              </div>
+              <!-- right div -->
+              <div class="rightDiv">
+                <button class="tempButton" type="button" onclick="displayTo2('Celsius')">Celsius</button>
+                <button class="tempButton" type="button" onclick="displayTo2('Kelvin')">Kelvin</button>
+                <button class="tempButton" type="button" onclick="displayTo2('Fahrenheit')">Fahrenheit</button>
+              </div>
+              <!-- vertical line -->
+              <div class="vl"></div>
+              <!-- answer part -->
+              <div class="answerDiv">
+                <button class="answerButton" type="button" onclick="convertTemperature()">Convert</button>
+                <input type="text" id="answerInput2" name="answerInput" placeholder="Answer">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    
+    <!-- Bootstrap Script -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <!-- My Javascript Link -->
+    <script src="js/unit.js"></script>
+  </body>
+</html>
